@@ -13,14 +13,14 @@ function App() {
       <Router>
         <Header></Header>
         <Switch>
-          <Route path='/home'>
+          <Route exact path='/home'>
+            <Home />
+          </Route>
+          <Route exact path='/'>
             <Home />
           </Route>
           <Route path='/post-details/:postId'>
             <PostDetails />
-          </Route>
-          <Route exact path='/'>
-            <Home />
           </Route>
           <Route path='*'>
             <NoMatch />
